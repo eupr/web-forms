@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body{
+  font-family: "Roboto";
+}
+.wraper{
+    margin: 80px 100px;
+}
+h1{
+    font-size: 30px;
+    color: #1b2441;
+    font-weight: 700;
+    text-align: center;
+}
+h2{
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #b3b3b3;
+  font-weight: bold;
+}
+.FirstForm{
+  padding: 50px 0;
+}
+.first{
+  display: inline-block;
+  width: 345px;
+}
+.first input,
+.first select{
+  margin-bottom: 10px;
+}
+.sign-in{
+  width: 330px;
+  padding: 15px;
+}
+.cityselect{
+  width: 362px;
+  padding: 15px;
+}
+.sign-in:nth-child(4){
+  margin-bottom: 10px;
+}
+.register{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #12d661;
+  width: 364px;
+  padding: 15px;
+  border: none;
+}
+.first option{
+  padding: 15px;
+}
+.gray{
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  display: inline-block;
+  width: 480px;
+}
+.gray input{
+  float: right;
+}
+.gray p{
+  display: inline-block;
+}
+.date{
+  display: inline-block;
+  margin-right: 225px;
+}
+.third input{
+  display: none;
+}
+label{
+  position: relative;
+}
+.men label::before{
+  content:"";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url(../img/sprite.png);
+  background-position: -26px -6px;
+}
+.women label::before{
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url(../img/sprite.png);
+  background-position: -24px -2px;
+}
+.sixth{
+  float: right;
+}
