@@ -19,47 +19,47 @@
   font-weight: bold;
   font-style: normal;
 }
-body{
+body {
   font-family: "Roboto";
 }
-.wraper{
-    margin: 80px 100px;
+.wraper {
+  margin: 80px 100px;
 }
-h1{
-    font-size: 30px;
-    color: #1b2441;
-    font-weight: 700;
-    text-align: center;
+h1 {
+  font-size: 30px;
+  color: #1b2441;
+  font-weight: 700;
+  text-align: center;
 }
-h2{
+h2 {
   font-size: 20px;
   letter-spacing: 0px;
   color: #b3b3b3;
   font-weight: bold;
 }
-.FirstForm{
+.FirstForm {
   padding: 50px 0;
 }
-.first{
+.first {
   display: inline-block;
   width: 345px;
 }
 .first input,
-.first select{
+.first select {
   margin-bottom: 10px;
 }
-.sign-in{
+.sign-in {
   width: 330px;
   padding: 15px;
 }
-.cityselect{
+.cityselect {
   width: 362px;
   padding: 15px;
 }
-.sign-in:nth-child(4){
+.sign-in:nth-child(4) {
   margin-bottom: 10px;
 }
-.register{
+.register {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
@@ -70,48 +70,105 @@ h2{
   padding: 15px;
   border: none;
 }
-.first option{
+.register:hover {
+  background-color: #3e6aff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
+}
+.first option {
   padding: 15px;
 }
-.gray{
+.gray {
   border-radius: 3px;
   background-color: #f7f7f7;
   border: 1px solid #e5e5e5;
   display: inline-block;
   width: 480px;
-}
-.gray input{
   float: right;
 }
-.gray p{
+.gray input {
+  float: right;
+}
+.gray p {
   display: inline-block;
 }
-.date{
+.date {
   display: inline-block;
   margin-right: 225px;
 }
-.third input{
+.third input {
   display: none;
 }
-label{
+label {
   position: relative;
 }
-.men label::before{
-  content:"";
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  background: url(../img/sprite.png);
-  background-position: -26px -6px;
+.gender label {
+  line-height: 75px;
+  padding-left: 85px;
 }
-.women label::before{
+.men + label::before {
   content: "";
   position: absolute;
   width: 70px;
   height: 70px;
   background: url(../img/sprite.png);
   background-position: -24px -2px;
+  left: 0;
 }
-.sixth{
+.men:checked + label::before {
+  background-position: -24px -77px;
+}
+.women + label::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url(../img/sprite.png);
+  background-position: -99px -2px;
+  left: 0;
+}
+.women:checked + label:before {
+  background-position: -99px -79px;
+}
+.sixth {
   float: right;
+}
+.fifth td input{
+  width: 196px;
+  padding: 11px;
+}
+.tabletwo select{
+  padding: 11px;
+  width: 220px;
+}
+.fifth td{
+  /width: 424px;
+}
+.butoms a {
+  font-size: 14px;
+  color: #6e6f77;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 25px;
+}
+.butoms input {
+  padding: 15px 25px;
+  background-color: #12d661;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+.back {
+  border: 1px solid #6e6f77;
+}
+.back:hover {
+  background-color: #6e6f77;
+  color: #fff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
+}
+.butoms input:hover {
+  background-color: #3e6aff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
 }

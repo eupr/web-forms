@@ -24,8 +24,8 @@
                             <option value="Хмельницький">Хмельницький</option>
                         </select>
                     </label>
-                    <label for="message"><textarea name="email" id="message" cols="30" rows="10" placeholder="Message" class="sign-in"></textarea></label>
-                    <label for="register"><input type="submit" name="submit" id="register" class="register" value="Зареєструватися"></label>
+                    <label for="message"><textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="sign-in"></textarea></label>
+                    <label for="register"><input type="submit" name="submit" id="register" class="register" value="Зареєструватися?"></label>
                 </form>
             </div>
             <div class="sixth">
@@ -97,18 +97,19 @@
                 <form action method="POST">
                     <table>
                         <thead>
-                            <tr>
-                                <th><label for="fio">ФІО:</label></th>
-                                <th><input type="text" name="fio" id="fio"></th>
-                            </tr>
+                           <tr></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td><label for="password"><input type="password" name="password" id="password"></label></td>
+                                <td><label for="fio">ФІО:</label></td>
+                                <td><input type="text" name="fio" id="fio"></td>
                             </tr>
                             <tr>
-                                <td></td>
+                                <td><label for="password">Пароль:</label></td>
+                                <td><input type="password" name="password" id="password"></td>
+                            </tr>
+                            <tr>
+                                <td>Місто:</td>
                                 <td>
                                     <label for="tableselect">
                                         <select name="tableselect" id="tableselect">
@@ -121,23 +122,29 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td></td>
+                                <td>Стать:</td>
                                 <td>
-                                    <p><label for=""><input type="radio" name="" id=""></label></p>
-                                    <p><label for=""><input type="radio" name="" id=""></label></p>
+                                    <p>
+                                        <input type="radio" name="tablegender" id="tablemen">
+                                        <label for="tablemen"></label>
+                                    </p>
+                                    <p>
+                                        <input type="radio" name="tablegender" id="tablewomen">
+                                        <label for="tablewomen"></label>
+                                    </p>
                                 </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td><label for=""><input type="file" name="" id=""></label></td>
+                                <td>Фото:</td>
+                                <td><label for="file"><input type="file" name="file" id="file" class="file"></label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="comment">Комертарій:</label></td>
+                                <td><textarea name="comment" id="comment" cols="30" rows="10"></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><label for=""><textarea name="" id="" cols="30" rows="10"></textarea></label></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><label for=""><input type="submit" name="" id=""></label></td>
+                                <td><label for="reg"><input type="submit" name="reg" id="reg"></label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -149,27 +156,28 @@
                 <h2>05.Форма таблицею</h2>
                 <h3>Оформлення заявки</h3>
                 <form action method="POST">
-                    <div class="firsttable">
-                        <p class="table-row">
-                            <i class="table-cell">
-                                <span>Прізвище та ім'я</span>
-                                <label for="rowname"><input type="text" name="rowname" id="rowname"></label>
-                            </i>
-                            <i class="table-cell">
-                                <span>Ел.пошта</span>
-                                <label for="rowmail"><input type="text" name="" id="rowmail"></label>
-                            </i>
-                            <i class="table-cell">
-                                <span>Телефон</span>
-                                <label for="rowtel"><input type="text" name="" id="rowtel"></label>
-                            </i>
-                        </p>
-                    </div>
-                    <div class="secondtable">
-                        <p class="table-row">
-                            <i class="table-cell">
-                                <span>Країна</span>
-                                <label for="country">
+                    <table class="tableone">
+                        <tbody>
+                            <tr>
+                                <td>Прізвище та ім'я</td>
+                                <td>Ел.пошта</td>
+                                <td>Телефон</td>
+                            </tr>
+                            <tr>
+                                <td><label for="mail"><input type="text" name="mail" id="mail"></label></td>
+                                <td><label for="surname"><input type="text" name="surname" id="surname"></label></td>
+                                <td><label for="number"><input type="text" name="number" id="number"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="tabletwo">
+                        <tbody>
+                            <tr>
+                                <td>Країна</td>
+                                <td>Адреса</td>
+                            </tr>
+                            <tr>
+                                <td><label for="country">
                                     <select name="country" id="country">
                                         <option value="Your country" selected disabled>Your country</option>
                                         <option value="Індонезія">Індонезія</option>
@@ -179,39 +187,28 @@
                                         <option value="Азейбарджан">Азейбарджан</option>
                                         <option value="Грузія">Грузія</option>
                                     </select>
-                                </label>
-                            </i>
-                            <i class="table-cell">
-                                <span>Адреса</span>
-                                <label for="adres"><input type="text" name="adres" id="adres"></label>
-                            </i>
-                        </p>
-                    </div>
-                    <div class="thirdtable">
-                        <p class="table-row">
-                            <i class="table-cell">
-                                <span>Місто</span>
-                                <label for="city"><input type="text" name="city" id="city"></label>
-                            </i>
-                            <i class="table-cell">
-                                <span>Будинок</span>
-                                <label for="house"><input type="text" name="house" id="house"></label>
-                            </i>
-                            <i class="table-cell">
-                                <span>Поштовий індекс</span>
-                                <label for="mailindex"><input type="text" name="mailindex" id="mailindex"></label>
-                            </i>
-                        </p>
-                    </div>
-                    <p class="agree-row">
-                        <p>
-                            <label for="agree"><input type="checkbox" name="agree" id="agree"></label>
-                            Я погоджуюся з правилами оплати та доставки
-                        </p>
-                    </p>
+                                </label></td>
+                                <td class="colespan"><label for="adres"><input type="text" name="adres" id="adres"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="thirdtable">
+                        <tbody>
+                            <tr>
+                                <td>Місто</td>
+                                <td>Будинок</td>
+                                <td>Поштовий індекс</td>
+                            </tr>
+                            <tr>
+                                <td><label for="town"><input type="text" name="town" id="town"></label></td>
+                                <td><label for="house"><input type="text" name="house" id="house"></label></td>
+                                <td><label for="index"><input type="text" name="index" id="index"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="butoms">
-                        <a href="#" class="back"></a>
-                        <label for="makeout"><input type="submit" value="Оформити покупку" id="makeout"></label>
+                        <a href="#" class="back">Повернутися назад?</a>
+                        <label for="makeout"><input type="submit" value="Оформити покупку?" id="makeout"></label>
                     </div>
                 </form>
             </div>
