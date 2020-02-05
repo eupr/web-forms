@@ -15,16 +15,16 @@
                 <form action method="GET">
                     <h2>01.Проста форма</h2>
                     <label for="name"><input type="text" name="name" id="name" class="sign-in" placeholder="Введіть ім'я"></label>
-                    <label for="email"><input type="email" name="email" id="email" class="sign-in" placeholder="Email"></label>
+                    <label for="email"><input type="email" name="email" id="email" class="sign-in" placeholder="Ел.Пошта"></label>
                     <label for="cities" class="loc">
                         <select name="loc" id="cities" class="cityselect">
-                            <option value="Ваше місто" selected disabled>Your city</option>
+                            <option value="Ваше місто" selected disabled>Ваше місто</option>
                             <option value="Київ">Київ</option>
                             <option value="Львів">Львів</option>
                             <option value="Хмельницький">Хмельницький</option>
                         </select>
                     </label>
-                    <label for="message"><textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="sign-in"></textarea></label>
+                    <label for="message"><textarea name="message" id="message" cols="30" rows="10" placeholder="Повідомлення" class="sign-in"></textarea></label>
                     <label for="register"><input type="submit" name="submit" id="register" class="register" value="Зареєструватися?"></label>
                 </form>
             </div>
@@ -34,7 +34,9 @@
                     <form action method="POST">
                         <p>Логін</p>
                         <label for=""><input type="text" name="" id=""></label>
+                        <p>Пароль</p>
                         <label for=""><input type="text" name="" id=""></label>
+                        <p><a href="#">Забули пароль?</a></p>
                     </form>
                 </div>
             </div>
@@ -83,9 +85,9 @@
                         </p>
                     </div>
                     <div class="slidecheck">
-                        <p><label for="slidenews"><input type="checkbox" name="slidenews" id="slidenews"></label>
-                        <p><label for="sausage"><input type="checkbox" name="sausage" id="sausage"></label></p>
-                        <p><label for="light"><input type="checkbox" name="light" id="light"></label></p></p>
+                        <p><label for="slidenews"><input type="checkbox" name="slidenews" id="slidenews" class="slider"></label>
+                        <p><label for="sausage"><input type="checkbox" name="sausage" id="sausage" class="slider"></label></p>
+                        <p><label for="light"><input type="checkbox" name="light" id="light" class="slider"></label></p></p>
                     </div>
                 </form>
             </div>
@@ -102,49 +104,47 @@
                         <tbody>
                             <tr>
                                 <td><label for="fio">ФІО:</label></td>
-                                <td><input type="text" name="fio" id="fio"></td>
+                                <td><input type="text" name="fio" id="fio" class="inputtable" placeholder="Введіть ім'я"></td>
                             </tr>
                             <tr>
                                 <td><label for="password">Пароль:</label></td>
-                                <td><input type="password" name="password" id="password"></td>
+                                <td><input type="password" name="password" id="password" class="inputtable" placeholder="Введіть не менше 6 символів"></td>
                             </tr>
                             <tr>
-                                <td>Місто:</td>
-                                <td>
-                                    <label for="tableselect">
-                                        <select name="tableselect" id="tableselect">
-                                            <option value="Ваше місто" selected disabled>Your city</option>
-                                            <option value="Київ">Київ</option>
-                                            <option value="Львів">Львів</option>
-                                            <option value="Хмельницький">Хмельницький</option>
-                                        </select>      
-                                    </label>
+                                <td><label for="tableselect">Місто:</label></td>
+                                <td>                                    
+                                    <select name="tableselect" id="tableselect" class="tableselect">
+                                        <option value="Ваше місто" selected disabled>Ваше місто</option>
+                                        <option value="Київ">Київ</option>
+                                        <option value="Львів">Львів</option>
+                                        <option value="Хмельницький">Хмельницький</option>
+                                    </select>      
                                 </td>
                             </tr>
                             <tr>
                                 <td>Стать:</td>
                                 <td>
                                     <p>
-                                        <input type="radio" name="tablegender" id="tablemen">
-                                        <label for="tablemen"></label>
+                                        <input type="radio" name="tablegender" id="tablemen" class="inputtable">
+                                        <label for="tablemen">Чоловік</label>
                                     </p>
                                     <p>
-                                        <input type="radio" name="tablegender" id="tablewomen">
-                                        <label for="tablewomen"></label>
+                                        <input type="radio" name="tablegender" id="tablewomen" class="inputtable">
+                                        <label for="tablewomen">Жінка</label>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Фото:</td>
-                                <td><label for="file"><input type="file" name="file" id="file" class="file"></label></td>
+                                <td><label for="file">Фото:</label></td>
+                                <td><label for="file" class="foto">Виберіть файл</label><input type="file" name="file" id="file" class="file"></td>
                             </tr>
                             <tr>
                                 <td><label for="comment">Комертарій:</label></td>
-                                <td><textarea name="comment" id="comment" cols="30" rows="10"></textarea></td>
+                                <td><textarea name="comment" id="comment" cols="30" rows="10" class="inputtable" placeholder="Введіть текст повідомлення"></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><label for="reg"><input type="submit" name="reg" id="reg"></label></td>
+                                <td><label for="reg"><input type="submit" name="reg" id="reg" class="regbutom" value="Зареєструватися?"></label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -179,7 +179,7 @@
                             <tr>
                                 <td><label for="country">
                                     <select name="country" id="country">
-                                        <option value="Your country" selected disabled>Your country</option>
+                                        <option value="Your country" selected disabled>Ваше місце проживання</option>
                                         <option value="Індонезія">Індонезія</option>
                                         <option value="Польша">Польша</option>
                                         <option value="Естонія">Естонія</option>

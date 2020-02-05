@@ -42,18 +42,18 @@ h2 {
 }
 .first {
   display: inline-block;
-  width: 345px;
+  width: 296px;
 }
 .first input,
 .first select {
   margin-bottom: 10px;
 }
 .sign-in {
-  width: 330px;
+  width: 100%;
   padding: 15px;
 }
 .cityselect {
-  width: 362px;
+  width: 330px;
   padding: 15px;
 }
 .sign-in:nth-child(4) {
@@ -66,7 +66,7 @@ h2 {
   color: #fff;
   border-radius: 3px;
   background-color: #12d661;
-  width: 364px;
+  width: 330px;
   padding: 15px;
   border: none;
 }
@@ -129,19 +129,63 @@ label {
 .women:checked + label:before {
   background-position: -99px -79px;
 }
+.inputtable {
+  width: 305px;
+  padding: 15px;
+}
+.tableselect {
+  width: 339px;
+  padding: 15px;
+}
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+.foto {
+  display: inline-block;
+  background-color: #3e6aff;
+  color: #fff;
+  padding: 18px 36px;
+  visibility: visible;
+  cursor: pointer;
+}
+.foto:hover {
+  background-color: #2857f4;
+  box-shadow: 0px 2px 2.5px rgba(15, 40, 126, 0.35);
+}
+.regbutom {
+  width: 339px;
+  padding: 15px;
+  background-color: #12d661;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+.fourth td:first-child{
+  width: 160px;
+}
+.slidecheck:after {
+  position: relative;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 25px;
+  background-color: #cfcfd1;
+}
 .sixth {
   float: right;
 }
-.fifth td input{
+.fifth td input {
   width: 196px;
   padding: 11px;
 }
-.tabletwo select{
+.tabletwo select {
   padding: 11px;
   width: 220px;
-}
-.fifth td{
-  /width: 424px;
 }
 .butoms a {
   font-size: 14px;
@@ -159,6 +203,7 @@ label {
   color: #ffffff;
   font-weight: 700;
   text-align: center;
+  margin-left: 294px;
 }
 .back {
   border: 1px solid #6e6f77;
