@@ -28,46 +28,50 @@
                     <label for="register"><input type="submit" name="submit" id="register" class="register" value="Зареєструватися?"></label>
                 </form>
             </div>
-            <div class="sixth">
+            <wraper class="fixedform">
                 <h2>06.Фіксована форма</h2>
-                <div class="fixed">
-                    <form action method="POST">
-                        <p>Логін</p>
-                        <label for=""><input type="text" name="" id=""></label>
-                        <p>Пароль</p>
-                        <label for=""><input type="text" name="" id=""></label>
-                        <p><a href="#">Забули пароль?</a></p>
-                    </form>
+                <div class="sixth">
+                    <div class="fixed">
+                        <form action method="POST">
+                            <p>Логін</p>
+                            <label for="fixedlogin"><input type="text" name="fixedlogin" id="fixedlogin" class="fixedinput"></label>
+                            <p>Пароль</p>
+                            <label for="fixedpas"><input type="text" name="fixedpas" id="fixedpas" class="fixedinput"></label>
+                            <p><a href="#">Забули пароль?</a></p>
+                            <p><input type="checkbox" name="remember" id="remember" class="styled-check"><label for="remember">Запам'ятати пароль?</label></p>
+                            <label for="entrance"><input type="button" value="Увійти?" id="entrance" class="entrance"></label>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            </wraper>
         </div>
         <div class="SecondForm container clear">
             <div class="second clear">
                 <form action method="GET">
                     <h2>02.Елементи</h2>
                     <div class="deliver">
-                        <p><label for="post"><input type="radio" name="newpost" id="post" class="elements"><span>Нова Пошта</span></label></p>
-                        <p><label for="courier"><input type="radio" name="courier" id="courier" class="elements" ><span>Кур'єр</span></label></p>
-                        <p><label for="selfremoval"><input type="radio" name="selfremoval" id="selfremoval" class="selfremoval" disabled><span>Самовивіз</span></label></p>
+                        <p><label for="post"><input type="radio" name="newpost" id="post" class="styled-radio"><span>Нова Пошта</span></label></p>
+                        <p><label for="courier"><input type="radio" name="courier" id="courier" class="styled-radio" ><span>Кур'єр</span></label></p>
+                        <p><label for="selfremoval"><input type="radio" name="selfremoval" id="selfremoval" class="styled-radio" disabled><span>Самовивіз</span></label></p>
                     </div>
                     <div class="term">
-                        <p><label for="term"><input type="checkbox" name="term" id="term" class="elementscheck"><span>Прочитав умови договору</span></label></p>
-                        <p><label for="vat"><input type="checkbox" name="vat" id="vat" class="elementscheck"><span>Згідний з ПДВ 9%</span></label></ p>
-                        <p><label for="news"><input type="checkbox" name="news" id="news" class="news" disabled><span>Отримувати новини на ел. пошту</span></label></p>
+                        <p><label for="term"><input type="checkbox" name="term" id="term" class="styled-check"><span>Прочитав умови договору</span></label></p>
+                        <p><label for="vat"><input type="checkbox" name="vat" id="vat" class="styled-check"><span>Згідний з ПДВ 9%</span></label></ p>
+                        <p><label for="news"><input type="checkbox" name="news" id="news" class="styled-check" disabled><span>Отримувати новини на ел. пошту</span></label></p>
+                    </div>
+                    <div class="gray clear">
+                        <div class="status">
+                            <p>Статус</p>
+                            <label for="novelty"><input type="checkbox" name="novelty" id="novelty" class="styled-check"><span>Новинки</span></label>
+                            <label for="prod"><input type="checkbox" name="prod" id="prod" class="styled-check"><span>Акційні товари</span></label>
+                            <label for="sale"><input type="checkbox" name="sale" id="sale" class="styled-check"><span>Розпродаж</span></label>
+                        </div>
+                        <div class="date">    
+                            <p>Дата</p>
+                            <label for="date" class="date"><input type="date" name="date" id="date" class="date"></label>
+                        </div>
                     </div>
                 </form>
-            </div>
-            <div class="gray clear">
-                <div class="status">
-                    <p>Статус</p>
-                    <label for="novelty"><input type="checkbox" name="" id="novelty"><span>Новинки</span></label>
-                    <label for="prod"><input type="checkbox" name="" id="prod"><span>Акційні товари</span></label>
-                    <label for="sale"><input type="checkbox" name="" id="sale"><span>Розпродаж</span></label>
-                </div>
-                <div class="date">    
-                    <p>Дата</p>
-                    <label for="date" class="date"><input type="date" name="date" id="date" class="date"></label>
-                </div>
             </div>
         </div>
         <div class="ThirdForm">
@@ -85,9 +89,9 @@
                         </p>
                     </div>
                     <div class="slidecheck">
-                        <p><label for="slidenews"><input type="checkbox" name="slidenews" id="slidenews" class="slider"></label>
-                        <p><label for="sausage"><input type="checkbox" name="sausage" id="sausage" class="slider"></label></p>
-                        <p><label for="light"><input type="checkbox" name="light" id="light" class="slider"></label></p></p>
+                        <p><input type="checkbox" name="slidenews" id="slidenews" class="slider"><label for="slidenews">Отримувати новини</label></p>
+                        <p><input type="checkbox" name="sausage" id="sausage" class="slider"><label for="sausage">Купити додому ковбаси</label></p>
+                        <p><input type="checkbox" name="light" id="light" class="slider"><label for="light">Включити світло</label></p>
                     </div>
                 </form>
             </div>
@@ -125,11 +129,11 @@
                                 <td>Стать:</td>
                                 <td>
                                     <p>
-                                        <input type="radio" name="tablegender" id="tablemen" class="inputtable">
+                                        <input type="radio" name="tablegender" id="tablemen" class="styled-radio">
                                         <label for="tablemen">Чоловік</label>
                                     </p>
                                     <p>
-                                        <input type="radio" name="tablegender" id="tablewomen" class="inputtable">
+                                        <input type="radio" name="tablegender" id="tablewomen" class="styled-radio">
                                         <label for="tablewomen">Жінка</label>
                                     </p>
                                 </td>
@@ -188,7 +192,7 @@
                                         <option value="Грузія">Грузія</option>
                                     </select>
                                 </label></td>
-                                <td class="colespan"><label for="adres"><input type="text" name="adres" id="adres"></label></td>
+                                <td><label for="adres"><input type="text" name="adres" id="adres" class="colespan"></label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -206,6 +210,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="check">
+                        <label for="agree"><input type="checkbox" name="agree" id="agree" class="styled-check"><span>Я погоджуюся з правилами оплати та доставки товару</span></label>
+                    </div>
                     <div class="butoms">
                         <a href="#" class="back">Повернутися назад?</a>
                         <label for="makeout"><input type="submit" value="Оформити покупку?" id="makeout"></label>

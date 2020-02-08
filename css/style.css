@@ -48,6 +48,9 @@ h2 {
 .first select {
   margin-bottom: 10px;
 }
+.first textarea{
+  width: 298px;
+}
 .sign-in {
   width: 100%;
   padding: 15px;
@@ -71,11 +74,19 @@ h2 {
   border: none;
 }
 .register:hover {
-  background-color: #3e6aff;
+  background-color: #07be51;
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
 }
 .first option {
   padding: 15px;
+}
+.deliver,
+.term{
+  display: inline-block;
+}
+.deliver{
+  margin-right: 60px;
 }
 .gray {
   border-radius: 3px;
@@ -85,7 +96,7 @@ h2 {
   width: 480px;
   float: right;
 }
-.gray input {
+.gray {
   float: right;
 }
 .gray p {
@@ -95,7 +106,14 @@ h2 {
   display: inline-block;
   margin-right: 225px;
 }
-.third input {
+.gender,
+.slidecheck{
+  display: inline-block;
+}
+.gender{
+  margin-right: 300px;
+}
+.gender input {
   display: none;
 }
 label {
@@ -117,6 +135,10 @@ label {
 .men:checked + label::before {
   background-position: -24px -77px;
 }
+.men:checked + label,
+.women:checked + label{
+  color: #3e6aff;
+}
 .women + label::before {
   content: "";
   position: absolute;
@@ -129,9 +151,54 @@ label {
 .women:checked + label:before {
   background-position: -99px -79px;
 }
+.slidecheck label{
+  padding-left: 65px;
+}
+.slidecheck p{
+  margin: 0;
+  margin-bottom: 25px;
+}
+.slider{
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.slider+label{
+  position: relative;
+}
+.slider+label::before,
+.slider+label::after{
+  content: "";
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.slider+label::before{
+  width: 46px;
+  height: 24px;
+  border-radius: 13px;
+  background-color: #cfcfd1;
+  left: 0;
+}
+.slider+label:after{
+  width: 20px;
+  height: 20px;
+  top: 1.5px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.slider:checked+label::before{
+  background-color: #3e6aff;
+}
+.slider:checked+label:after{
+  left: 23px;
+}
 .inputtable {
   width: 305px;
   padding: 15px;
+}
+.fourth p{
+  display: inline-block;
 }
 .tableselect {
   width: 339px;
@@ -163,29 +230,24 @@ label {
   font-weight: 700;
   text-align: center;
 }
+.regbutom:hover{
+  background-color: #07be51;
+}
 .fourth td:first-child{
   width: 160px;
 }
-.slidecheck:after {
-  position: relative;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  width: 45px;
-  height: 25px;
-  background-color: #cfcfd1;
-}
-.sixth {
-  float: right;
-}
-.fifth td input {
-  width: 196px;
+.tableone input,
+.thirdtable input {
+  width: 194px;
   padding: 11px;
 }
 .tabletwo select {
   padding: 11px;
   width: 220px;
+}
+.colespan {
+  width: 418px; 
+  padding: 11px;
 }
 .butoms a {
   font-size: 14px;
@@ -203,7 +265,7 @@ label {
   color: #ffffff;
   font-weight: 700;
   text-align: center;
-  margin-left: 294px;
+  margin-left: 288px;
 }
 .back {
   border: 1px solid #6e6f77;
@@ -214,6 +276,35 @@ label {
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
 }
 .butoms input:hover {
-  background-color: #3e6aff;
+  background-color: #07be51;
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
+}
+.fixedform {
+  float: right;
+  background-color: #fafafa;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  /position: fixed;
+  z-index: 4;
+}
+.fixed{
+  padding: 0 25px;
+}
+.fixedinput {
+  padding: 10px;
+  width: 238px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+.entrance{
+  width: 260px;
+  padding: 16px 0;
+  border: none;
+  background-color: #07be51;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.styled-radio{
+  visibility: hidden;
+  
 }
