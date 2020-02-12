@@ -8,7 +8,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Bold.eot");
@@ -20,10 +19,11 @@
   font-style: normal;
 }
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
-.wraper {
-  margin: 80px 100px;
+.wrapper {
+  margin: 80px auto 140px;
+  width: 80%;
 }
 h1 {
   font-size: 30px;
@@ -37,87 +37,55 @@ h2 {
   color: #b3b3b3;
   font-weight: bold;
 }
+textarea{
+  resize: vertical;
+}
+label {
+  position: relative;
+}
 .FirstForm {
   padding: 50px 0;
-}
-.first {
   display: inline-block;
-  width: 296px;
+  max-width: 330px;
 }
-.first input,
-.first select {
-  margin-bottom: 10px;
-}
-.first textarea{
-  width: 298px;
-}
-.sign-in {
-  width: 100%;
-  padding: 15px;
-}
-.cityselect {
-  width: 330px;
-  padding: 15px;
-}
-.sign-in:nth-child(4) {
-  margin-bottom: 10px;
-}
-.register {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  border-radius: 3px;
-  background-color: #12d661;
-  width: 330px;
-  padding: 15px;
-  border: none;
-}
-.register:hover {
-  background-color: #07be51;
-  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
-  cursor: pointer;
-}
-.first option {
-  padding: 15px;
-}
-.deliver,
-.term{
+.boxes50{
   display: inline-block;
+  width: 50%;
 }
 .deliver{
-  margin-right: 60px;
+  width: 33%;
+  display: inline-block;
+}
+.term{
+  width: 77%;
+  display: inline-block;
+}
+.inputs{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
 }
 .gray {
   border-radius: 3px;
   background-color: #f7f7f7;
   border: 1px solid #e5e5e5;
-  display: inline-block;
   width: 480px;
-  float: right;
+  padding: 20px;
 }
-.gray {
-  float: right;
-}
-.gray p {
-  display: inline-block;
-}
-.date {
-  display: inline-block;
-  margin-right: 225px;
+.dateinput{
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 }
 .gender,
 .slidecheck{
   display: inline-block;
 }
-.gender{
-  margin-right: 300px;
-}
 .gender input {
   display: none;
-}
-label {
-  position: relative;
 }
 .gender label {
   line-height: 75px;
@@ -193,16 +161,11 @@ label {
 .slider:checked+label:after{
   left: 23px;
 }
-.inputtable {
-  width: 305px;
-  padding: 15px;
-}
 .fourth p{
   display: inline-block;
 }
-.tableselect {
-  width: 339px;
-  padding: 15px;
+.fourth td:last-child{
+  width: 340px;
 }
 .file {
   visibility: hidden;
@@ -215,41 +178,16 @@ label {
   padding: 18px 36px;
   visibility: visible;
   cursor: pointer;
+  border-radius: 3px;
 }
 .foto:hover {
   background-color: #2857f4;
   box-shadow: 0px 2px 2.5px rgba(15, 40, 126, 0.35);
 }
-.regbutom {
-  width: 339px;
-  padding: 15px;
-  background-color: #12d661;
-  border: none;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-}
-.regbutom:hover{
-  background-color: #07be51;
-}
 .fourth td:first-child{
   width: 160px;
 }
-.tableone input,
-.thirdtable input {
-  width: 194px;
-  padding: 11px;
-}
-.tabletwo select {
-  padding: 11px;
-  width: 220px;
-}
-.colespan {
-  width: 418px; 
-  padding: 11px;
-}
-.butoms a {
+.buttoms a {
   font-size: 14px;
   color: #6e6f77;
   font-weight: 700;
@@ -257,54 +195,155 @@ label {
   text-decoration: none;
   padding: 14px 25px;
 }
-.butoms input {
+.buttom {
   padding: 15px 25px;
   background-color: #12d661;
   border: none;
   font-size: 14px;
-  color: #ffffff;
+  color: #fff;
   font-weight: 700;
   text-align: center;
-  margin-left: 288px;
+  border-radius: 3px;
 }
 .back {
   border: 1px solid #6e6f77;
+  border-radius: 3px;
 }
 .back:hover {
   background-color: #6e6f77;
   color: #fff;
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
 }
-.butoms input:hover {
+.buttom:hover {
   background-color: #07be51;
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
 }
 .fixedform {
   float: right;
   background-color: #fafafa;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-  /position: fixed;
+  position: fixed;
+  display: none;
   z-index: 4;
 }
 .fixed{
   padding: 0 25px;
 }
-.fixedinput {
-  padding: 10px;
-  width: 238px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-}
-.entrance{
-  width: 260px;
-  padding: 16px 0;
-  border: none;
-  background-color: #07be51;
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.styled-radio{
+.styled-radio,
+.disabledradio{
   visibility: hidden;
-  
+  position: absolute;
+  z-index: -2;
+}
+.styled-radio+label,
+.disabledradio+label{
+  position: relative;
+}
+.styled-radio+label::before,
+.styled-radio+label::after,
+.disabledradio+label::before,
+.disabledradio+label::after{
+  content: "";
+  position: absolute;
+}
+.styled-radio+label::before,
+.disabledradio+label::before{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  top: 1px;
+}
+.deliver span,
+.fourth span{
+  padding-left: 25px;
+}
+.fourth span:first-child{
+  padding-right: 25px;
+}
+.styled-radio:checked+label::after{
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #3e6aff;
+  border-radius: 50%;
+  left: 5px;
+  top: 6px;
+}
+.disabledradio:checked+label::after{
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ccc;
+  border-radius: 50%;
+  left: 5px;
+  top: 6px;
+}
+.styled-radio:checked+label::before{
+  border: 1px solid #3e6aff;
+}
+.styled-check,
+.disabledcheck{
+  visibility: hidden;
+  position: absolute;
+  z-index: -2;
+}
+.styled-check+label,
+.disabledcheck+label{
+  position: relative;
+}
+.styled-check+label::before,
+.styled-check+label::after,
+.disabledcheck+label:before,
+.disabledcheck+label:after{
+  content: "";
+  position: absolute;
+}
+.styled-check+label::before,
+.disabledcheck+label:before{
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  top: 1px;
+}
+.disabledcheck:checked+label::after{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  left: 5px;
+  top: 7px;
+}
+.styled-check:checked+label::before{
+  border: 1px solid #3e6aff;
+}
+.styled-check:checked+label::after{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #244dd7;
+  border-left: 2px solid #244dd7;
+  left: 5px;
+  top: 7px;
+}
+.term span,
+.fixed span,
+.gray span{
+  padding-left: 25px;
+}
+.buttoms .buttom{
+  width: 180px;
+}
+.gray td:first-child{
+  width: 80px;
 }
