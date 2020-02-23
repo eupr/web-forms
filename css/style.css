@@ -37,34 +37,58 @@ h2 {
   color: #b3b3b3;
   font-weight: bold;
 }
+.clear:after{
+  content: "";
+  display: block;
+  clear: both;
+}
 textarea{
   resize: vertical;
+  height: 130px;
+  max-height: 180px;
+  min-height: 50px;
 }
 label {
   position: relative;
+  font-size: 14px;
 }
+select{
+  appearance: none;
+}
+p{
+  margin-top: 0;
+}
+::-webkit-calendar-picker-indicator { opacity: 0;}
+::-webkit-inner-spin-button { display: none; }
 .FirstForm {
   padding: 50px 0;
   display: inline-block;
   max-width: 330px;
 }
 .boxes50{
-  display: inline-block;
   width: 50%;
+  float: left;
+  top: 0;
 }
 .deliver{
   width: 33%;
-  display: inline-block;
+  float: left;
+  box-sizing: border-box;
 }
 .term{
-  width: 77%;
-  display: inline-block;
+  width: 67%;
+  float: right;
+  box-sizing: border-box;
 }
 .inputs{
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
   margin-bottom: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
 .gray {
   border-radius: 3px;
@@ -73,12 +97,25 @@ label {
   width: 480px;
   padding: 20px;
 }
-.dateinput{
+.gray tr:first-child td{
+  padding-bottom: 15px;
+}
+.date{
+  width: 150px;
   padding: 15px;
   font-size: 14px;
-  font-weight: 400;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+  color: #1f222c;
+  position: relative;
+}
+.date:before{
+  position: absolute;
+  content: "";
+  background-image: url(../img/sprite.png);
+  width: 18px;
+  height: 18px;
+  background-position: -1px -14px;
+  left: 145px;
+  top: 15px;
 }
 .gender,
 .slidecheck{
@@ -90,6 +127,7 @@ label {
 .gender label {
   line-height: 75px;
   padding-left: 85px;
+  font-weight: 700;
 }
 .men + label::before {
   content: "";
@@ -123,10 +161,10 @@ label {
   padding-left: 65px;
 }
 .slidecheck p{
-  margin: 0;
-  margin-bottom: 25px;
+  line-height: 40px;
 }
 .slider{
+  cursor: pointer;
   visibility: hidden;
   position: absolute;
   z-index: -1;
@@ -142,16 +180,17 @@ label {
 }
 .slider+label::before{
   width: 46px;
-  height: 24px;
+  height: 25px;
   border-radius: 13px;
   background-color: #cfcfd1;
   left: 0;
+  top: 0;
 }
 .slider+label:after{
   width: 20px;
   height: 20px;
-  top: 1.5px;
-  left: 2px;
+  top: 2.5px;
+  left: 3px;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -159,10 +198,17 @@ label {
   background-color: #3e6aff;
 }
 .slider:checked+label:after{
-  left: 23px;
+  left: 22px;
 }
 .fourth p{
   display: inline-block;
+}
+.fourth td:first-child{
+  padding-top: 15px;
+  vertical-align: top;
+}
+.fourth tr:nth-child(4) td:first-child{
+  padding: 0;
 }
 .fourth td:last-child{
   width: 340px;
@@ -175,7 +221,7 @@ label {
   display: inline-block;
   background-color: #3e6aff;
   color: #fff;
-  padding: 18px 36px;
+  padding: 14px 36px;
   visibility: visible;
   cursor: pointer;
   border-radius: 3px;
@@ -185,6 +231,7 @@ label {
   box-shadow: 0px 2px 2.5px rgba(15, 40, 126, 0.35);
 }
 .fourth td:first-child{
+  font-size: 14px;
   width: 160px;
 }
 .buttoms a {
@@ -194,6 +241,7 @@ label {
   text-align: center;
   text-decoration: none;
   padding: 14px 25px;
+  display: inline-block;
 }
 .buttom {
   padding: 15px 25px;
@@ -219,19 +267,46 @@ label {
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
   cursor: pointer;
 }
-.fixedform {
-  float: right;
-  background-color: #fafafa;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+.fixedform{
   position: fixed;
-  display: none;
+  top: 188px;
+  left: 71%;
   z-index: 4;
 }
-.fixed{
-  padding: 0 25px;
+.fixed {
+  background-color: #fafafa;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  width: 260px;
+  padding: 25px 25px 10px;
+}
+.fixed .inputs{
+  padding: 10px;
+}
+.close{
+  position: absolute;
+  content: "";
+  right: 10px;
+  top: 67px;
+  font-size: 20px;
+  color: #b3b3b3;
+  text-decoration: none;
+}
+.fixed p{
+  margin-bottom: 10px;
+}
+.absolute{
+  padding: 0;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+.forget{
+  font-size: 13px;
+  color: #3e6aff;
+  text-decoration: none;
 }
 .styled-radio,
 .disabledradio{
+  cursor: pointer;
   visibility: hidden;
   position: absolute;
   z-index: -2;
@@ -287,6 +362,7 @@ label {
 }
 .styled-check,
 .disabledcheck{
+  cursor: pointer;
   visibility: hidden;
   position: absolute;
   z-index: -2;
@@ -337,13 +413,67 @@ label {
   top: 7px;
 }
 .term span,
-.fixed span,
-.gray span{
+.remember span,
+.gray span,
+.check span{
   padding-left: 25px;
-}
-.buttoms .buttom{
-  width: 180px;
 }
 .gray td:first-child{
   width: 80px;
+}
+.fifthtable{
+  max-width: 680px;
+}
+.long{
+  box-sizing: border-box;
+  width: 450px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  height: 40px;
+}
+.fifth .buttom{
+  float: right;
+}
+.fifth .inputs{
+  height: 40px;
+  padding: 10px;
+  width: 220px;
+}
+.fifth td{
+  padding: 10px 9px 10px 0;
+}
+.fifth h3{
+  margin-bottom: 40px;
+}
+.absolutlabel{
+  position: absolute;
+  left: 5px;
+  top: -30px;
+  color: #b3b3b3;
+  font-size: 13px;
+}
+.formstable td{
+  position: relative;
+  line-height: 60px;
+}
+.formstable:nth-child(4){
+  margin-bottom: 25px;
+}
+.line{
+  border-bottom: 1px solid #e9e9e9;
+  margin: 25px 0 45px;
+}
+.formstable select{
+  position: relative;
+}
+.formstable select::before{
+  position: absolute;
+  content: "";
+  border-right: 1px solid #ccc;
+  width: 1px;
+  height: 19px;
+  top: 10px;
+  right: 30px;
 }
